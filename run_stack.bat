@@ -8,4 +8,4 @@ SET /P proceed = "Press enter to launch"
 
 start cmd.exe @cmd /k "%REDIS_PATH%"
 start cmd.exe @cmd /k "%MONGODB_PATH%"
-start cmd.exe @cmd /k "CD %QED_FLASK_PATH% && activate %QED_PY_ENV% && celery worker -A celery_cgi -Q qed --loglevel=DEBUG -c 2 -n qed_worker"
+start cmd.exe @cmd /k "CD %QED_FLASK_PATH% && activate %QED_PY_ENV% && celery worker -A celery_cgi -Q qed --loglevel=INFO --pool=solo -n qed_worker"
