@@ -50,3 +50,13 @@ quanted\hms.git repo through an IDE, like Visual Studio 2017 or Visual Studio Co
 Run py_env_setup_linux.sh, which only requires Anaconda to be installed and the shell initialized.
 
 run_stack.sh is in development...
+
+(pyCharm)
+Alternatively, pyCharm contains a feature that allows external tools to be run from inside the IDE.
+Under File > Settings > Tools > External Tools, click the + icon. Fill in name and description, use the following for program || arguments || working directory:
+
+Celery: C:\Users\%USERNAME%\.conda\envs\qed-dev_3.7\Libs\Scripts\celery.exe || worker -A celery_cgi -Q qed --loglevel=DEBUG -c 2 -n qed_worker || C:\git\qed\flask_qed
+Redis: C:\Program Files\Redis\redis-server.exe || -- || C:\Program Files\Redis
+MongoDB: C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe || -- || C:\Program Files\MongoDB\Server\3.4\bin
+
+Now, under Tools > External Tools, each of your added external tools will be listed. Clicking on them will execute the tool and provide the output to the run console. Multiple tools can be run in parallel, along with python run/debug configurations.
