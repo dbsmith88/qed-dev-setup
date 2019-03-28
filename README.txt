@@ -1,5 +1,5 @@
 QED Development Environment Setup README
-Updated: 03/22/2019
+Updated: 03/28/2019
 ------------------------------------------------------------------------------------------------
 
 Requirements:
