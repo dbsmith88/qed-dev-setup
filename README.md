@@ -69,3 +69,5 @@ Under File > Settings > Tools > External Tools, click the + icon. Fill in name a
 
 
 Now, under Tools > External Tools, each of your added external tools will be listed. Clicking on them will execute the tool and provide the output to the run console. Multiple tools can be run in parallel, along with python run/debug configurations.
+
+Note: Issue with the current version of celery requires that a single worker has to be used on windows machines, switch out '-c #' with '--pool=solo' to mitigate the issue.
