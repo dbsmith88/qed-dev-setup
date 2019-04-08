@@ -5,6 +5,14 @@ SET py_ver=3.7
 SET qed_env=%qed_name%_%py_ver%
 SET req_file=requirements.txt
 
+SET anaconda_path=%anaconda_path%
+IF "%anaconda_path%" == "" (
+	SET anaconda_path=C:\ProgramData\Anaconda3
+	ECHO anaconda_path environment variable not set, using default instead.
+)
+ECHO Anaconda path: %anaconda_path%
+SET path=%path%;%anaconda_path%\Library\bin;%anaconda_path%\Scripts
+
 ECHO QED Python Development Environment: %qed_env%
 ECHO Python Version: %py_ver%
 SET /P update=Update or Create? (u/c):
