@@ -7,11 +7,11 @@ SET req_file=requirements.txt
 
 ECHO QED Python Development Environment: %qed_env%
 ECHO Python Version: %py_ver%
-SET /P update=Update or Create? (u/c): 
+SET /P update=Update or Create? (u/c):
 
 IF /I %update% EQU c (
 	ECHO Creating conda environment...
-	ECHO y | conda create --name %qed_env% python=%py_ve%
+	ECHO y | conda create --name %qed_env% python=%py_ver%
 	ECHO Conda environment %qed_env% created
 ) ELSE (
 	ECHO Updating conda environment...
